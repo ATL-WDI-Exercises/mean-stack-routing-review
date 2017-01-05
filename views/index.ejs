@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="moviesApp">
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
@@ -7,5 +7,9 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <ui-view>Loading...</ui-view>
   </body>
+  <script src="/angular/angular.min.js" charset="utf-8"></script>
+  <script src="/angular-ui-router/release/angular-ui-router.min.js" charset="utf-8"></script>
+  <script src="/javascripts/client.js" charset="utf-8"></script>
 </html>
