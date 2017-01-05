@@ -1,4 +1,5 @@
 <h3>Here are some Movies</h3>
 <ul>
-  <li ng-repeat="movie in $ctrl.movies">{{ movie.title }}</li>
+  <li ng-repeat="movie in $ctrl.movies">
+    <a ui-sref="movies-show({ id: movie.id })">{{ movie.id }} - {{ movie.title }}</a></li>
 </ul>

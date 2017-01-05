@@ -41,6 +41,15 @@ angular.module('moviesApp', ['ui.router'])
   .catch(function(err) {
     alert(err);
   });
+
+  this.rating = null;
+  $http.get('/api/movies/' + id + '/ratings')
+  .then( (response) => {
+    this.rating = response.data.rating;
+  })
+  .catch(function(err) {
+    alert(err);
+  });
 })
 
 
